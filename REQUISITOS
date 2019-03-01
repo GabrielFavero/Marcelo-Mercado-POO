@@ -1,0 +1,8 @@
+Requisitos:
+Cadastrar Produto
+Venda
+
+Class Caixa:
+Nome;
+Estoque;
+Quantidade;
