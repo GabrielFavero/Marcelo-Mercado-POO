@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace GM_Supermercado
+{
+    class Caixa
+    {
+        public string Nome;
+        public decimal Estoque;
+        public decimal Quantidade;
+
+
+        public override string ToString()
+        {
+            return Nome + ", " + Quantidade +" UNIDADES.";
+        }
+
+    }
+}
