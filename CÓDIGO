@@ -1,0 +1,69 @@
+using System;
+
+namespace GM_Supermercado
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine();
+            Console.WriteLine("          GM SUPERMERCADO          ");
+            Console.WriteLine();
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("----------SEJA BEM-VINDO----------");
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine();
+
+            Caixa estoque = new Caixa();
+            int escolha = Convert.ToInt16("12");
+
+            Console.WriteLine("ESCOLHA A OPÇÃO: ");
+            Console.WriteLine("1 - CADASTRAR PRODUTOS");
+            Console.WriteLine("2 - VENDA");
+
+            escolha = Convert.ToInt16(Console.ReadLine());
+
+
+            switch (escolha)
+            {
+
+                case 1:
+                                     
+
+                    Console.WriteLine("-----CADASTRAR PRODUTO NO CAIXA------");
+                    Console.WriteLine();
+
+                    Console.Write("DÊ O NOME PARA O PRODUTO: ");
+                    estoque.Nome = Console.ReadLine();
+
+                    Console.Write("DIGITE A QUANTIDADE QUE DESEJA ADICIONAR: ");
+                    estoque.Quantidade = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("ITEM CADASTRADO: "+estoque);
+
+                    break;
+
+
+                case 2:
+                    Console.WriteLine("--------------VENDA--------------");
+                    Console.WriteLine();
+
+                    Console.Write("QUAL PRODUTO DESEJA COMPRAR: ");
+                    estoque.Nome = Console.ReadLine();
+
+                    Console.Write("QUAL A QUANTIDADE: ");
+                    estoque.Quantidade = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("CARRINHO DE COMPRA: "+estoque);
+
+                    break;
+
+                default:
+
+                    break;
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
